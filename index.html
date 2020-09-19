@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirect</title>
+  </head>
+  <body>
+    <script>
+      const preset = 'scavenger'
+      const url = new URL(window.location.href)
+      const params = url.search.slice(1).split(',')
+      if (params.length === 1) {
+        params.unshift('')
+      }
+      window.location.replace('//sotn.io?p:' + preset + ',n,' + params.join(','))
+    </script>
+  </body>
+</html>
